@@ -44,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  order: 1;
 }
 
 .logo-image {
@@ -56,6 +57,8 @@ body {
 .navigation {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
+  order: 2;
 }
 
 .nav-link {
@@ -70,6 +73,7 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
   position: relative;
+  align-self: center;
 }
 
 .nav-link:hover {
@@ -81,6 +85,7 @@ body {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
   font-weight: 600;
+  order: -1;
 }
 
 /* Hero Section */
@@ -90,13 +95,15 @@ body {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 60px;
   align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 /* Texto del hero */
@@ -104,6 +111,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex: 1;
+  align-items: flex-start;
+  order: 1;
 }
 
 .hero-title {
@@ -112,6 +122,7 @@ body {
   line-height: 1.1;
   color: #081425;
   margin: 0;
+  align-self: stretch;
 }
 
 .hero-highlight {
@@ -128,12 +139,14 @@ body {
   line-height: 1.6;
   margin: 0;
   opacity: 0.9;
+  align-self: stretch;
 }
 
 /* Botón CTA */
 .cta-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   background: linear-gradient(135deg, #081425 0%, #152645 50%, #294489 100%);
   color: white;
@@ -147,6 +160,7 @@ body {
   box-shadow: 0 8px 25px rgba(8, 20, 37, 0.3);
   text-decoration: none;
   width: fit-content;
+  align-self: flex-start;
 }
 
 .cta-button:hover {
@@ -173,6 +187,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  order: 2;
 }
 
 .preview-card {
@@ -184,6 +200,8 @@ body {
   box-shadow: 0 20px 60px rgba(8, 20, 37, 0.3);
   transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
   transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .preview-card:hover {
@@ -197,6 +215,7 @@ body {
   font-weight: 600;
   margin-bottom: 24px;
   text-align: center;
+  align-self: center;
 }
 
 .preview-content {
@@ -206,12 +225,16 @@ body {
   text-align: center;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .preview-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -226,6 +249,7 @@ body {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   margin: 0;
+  align-self: center;
 }
 
 /* Features Section */
