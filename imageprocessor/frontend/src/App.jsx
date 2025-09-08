@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LandingPage from './components/LandingPage';
+import HelpPage from './components/HelpPage';
 import './App.css';
 
 const App = () => {
